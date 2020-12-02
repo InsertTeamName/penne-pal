@@ -10,7 +10,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
    <top>
-      <Label text="Penne Pal" textFill="#ffe500" BorderPane.alignment="CENTER">
+      <Label text="Penne Pal" textFill="#ffc300" BorderPane.alignment="CENTER">
          <font>
             <Font name="Brush Script MT Italic" size="55.0" />
          </font>
@@ -27,7 +27,7 @@
                   <Font name="Brush Script MT Italic" size="26.0" />
                </font>
             </Button>
-            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#goToLoginPage" style="-fx-background-color: navy;" text="Login" textFill="WHITE" underline="true">
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#goToLoginPage" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="WHITE" underline="true">
                <font>
                   <Font size="18.0" />
                </font>

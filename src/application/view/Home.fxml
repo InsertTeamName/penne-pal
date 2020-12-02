@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.HomeController">
+   <top>
+      <HBox style="-fx-background-color: navy;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Penne Pal" textFill="#ffc300">
+               <font>
+                  <Font name="Brush Script MT Italic" size="39.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Label>
+            <FlowPane alignment="BOTTOM_RIGHT" hgap="30.0">
+               <children>
+                  <Button fx:id="shoppingListBtn" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#loadShoppingLists" style="-fx-background-color: transparent;" text="SHOPPING LIST" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="profileBtn" alignment="BOTTOM_RIGHT" mnemonicParsing="false" onAction="#loadProfile" style="-fx-background-color: transparent;" text="PROFILE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <BorderPane style="-fx-border-color: navy;" BorderPane.alignment="CENTER">
+         <left>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Number of Lists: ##" textFill="#0a009a">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Total Amount: $###.##" textFill="#0a009a">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <right>
+            <Button fx:id="addListBtn" mnemonicParsing="false" onAction="#addShoppingList" style="-fx-background-color: navy;" text="+ List" textFill="WHITE" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <FlowPane fx:id="shoppingListPane" hgap="10.0" prefHeight="200.0" prefWidth="200.0" vgap="10.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </FlowPane>
+   </center>
+</BorderPane>
