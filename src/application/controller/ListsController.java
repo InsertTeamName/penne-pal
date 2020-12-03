@@ -10,10 +10,15 @@ import application.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class ListsController extends PalController {
 
@@ -56,7 +61,25 @@ public class ListsController extends PalController {
 	}
 	
 	@FXML
-	public void addShoppingList(final ActionEvent e) {
+	public void addShoppingList(final ActionEvent e) throws IOException {
 		System.out.println("Add shopping lists");
+		final Stage listPopup = new Stage();
+		listPopup.initModality(Modality.APPLICATION_MODAL);
+		final Stage currentStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+		listPopup.initOwner(currentStage);
+		Pane pane = new Pane();
+		
+		final FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(this.getClass().getClassLoader().getResource("application/view/AddList.fxml"));
+		
+		
+		final Parent root = loader.load();
+		final Scene scene = new Scene(root);
+		
+		final AddListController listController = loader.getController();
+		
+		listPopup.setScene(scene);
+		listPopup.show();
+		
 	}
 }

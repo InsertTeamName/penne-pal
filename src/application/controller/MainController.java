@@ -31,7 +31,7 @@ public class MainController extends PalController{
 		System.out.println("Go to Sign Up Page!");
 		switchScene(this, "application/view/SignUp.fxml", e);
 	}
-	
+
 	/**
 	 * Takes user to login page
 	 * @param e
