@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SignupController">
+   <top>
+      <Label alignment="TOP_LEFT" text="Penne Pal" textFill="#ffc300" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font name="Brush Script MT Italic" size="25.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="10.0" top="5.0" />
+         </BorderPane.margin></Label>
+   </top>
+   <left>
+      <VBox prefHeight="334.0" prefWidth="268.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Sign Up" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="55.0" />
+               </font>
+            </Label>
+            <VBox>
+               <children>
+                  <Label text="Username" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signupUserField" prefHeight="25.0" prefWidth="0.0" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="signupPassField" />
+               </children>
+            </VBox>
+            <Button fx:id="signupBtn" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: gold;" text="SIGN UP">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <FlowPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label text="Already have an account?" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#goToLoginPage" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="WHITE" underline="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" top="30.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <Label fx:id="signupErrMsg" alignment="TOP_CENTER" contentDisplay="CENTER" text="Username is already taken!" textFill="RED" underline="true" visible="false" BorderPane.alignment="TOP_CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="115.0" />
+         </BorderPane.margin>
+      </Label>
+   </center>
+</BorderPane>

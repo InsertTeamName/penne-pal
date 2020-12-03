@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AddListController">
+   <center>
+      <VBox prefHeight="196.0" spacing="10.0" style="-fx-border-color: navy;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="errorLabel" text="The list name is or date is not filled!" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <VBox>
+               <children>
+                  <Label text="List Name" textFill="#342ca4">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="listNameTextField" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="List Date" textFill="#342ca4">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="listDatePicker" editable="false" />
+               </children>
+            </VBox>
+            <FlowPane alignment="BOTTOM_RIGHT">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addList" style="-fx-background-color: gold;" text="Add" textFill="#342ca4">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
