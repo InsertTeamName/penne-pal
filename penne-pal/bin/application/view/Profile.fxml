@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ProfileController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <bottom>
+      <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#saveInfo" style="-fx-background-color: gold;" text="Save" textFill="#342ca4" BorderPane.alignment="BOTTOM_RIGHT">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <left>
+      <VBox prefHeight="227.0" prefWidth="569.0" style="-fx-background-color: lightgray;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <children>
+            <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Edit Profile" textFill="#342ca4" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="errorLabel" alignment="TOP_LEFT" contentDisplay="TOP" text="You must fill out the name and email!" textFill="RED" visible="false">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Name:" textFill="#342ca4">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nameTextField" prefHeight="25.0" prefWidth="378.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="E-Mail:" textFill="#342ca4">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextField" prefHeight="25.0" prefWidth="378.0" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+            </VBox>
+            <Label fx:id="hiddenUsername" alignment="TOP_LEFT" contentDisplay="TOP" opacity="0.04" textFill="#e0dfed91" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <left>
+            <Label fx:id="userLabel" text="Hi username" textFill="#342ca4" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Times New Roman Bold" size="35.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <Button fx:id="signOutBtn" mnemonicParsing="false" onAction="#signOutUser" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Sign Out" textFill="#342ca4" underline="true" BorderPane.alignment="BOTTOM_RIGHT">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </right>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: navy;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <top>
+      <Label text="Penne Pal" textFill="#ffc300" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Brush Script MT Italic" size="55.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <bottom>
+      <VBox alignment="TOP_CENTER" prefHeight="167.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#goToSignUpPage" style="-fx-background-color: gold;" text="Sign Up">
+               <font>
+                  <Font name="Brush Script MT Italic" size="26.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#goToLoginPage" style="-fx-background-color: transparent; -fx-cursor: hand;" text="Login" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <Label text="Welcome to Penne Pal! Your friendly to use shopping manager!" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </center>
+</BorderPane>
