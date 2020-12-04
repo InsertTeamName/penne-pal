@@ -1,16 +1,21 @@
 # Penne Pal
 
--This app helps organize your grocery list with a click of a button. User will make an account and then you can log everything you want/ need. This will keep track of what you buy, when you buy and will also track budget.Can keep track of multiple lists and multiple budgets if you happen to be picking up grocery items for other people rather than yourself. 
-
+_This app helps organize your grocery list with a click of a button. User will make an account and then you can log everything you want/ need. This will keep track of what you buy, when you buy and will also tracks budget._
 
 ### Application Features
 
-- Offers Log in and Sign up options
-- 
+**User Database**
+- The user can create an account (providing a username, password, their full name, and email), sign-in, and sign-out.
+- On the "PROFILE" page, the user can edit their profile, updating their name or email. They can sign-out from here as well.
+- The user's lists are saved and protected. They are accessible even after signing out!
+**List Customization**
+- The user can customize their shopping lists, adding items along with their prices and quantities.
+**Add new lists**
+- New shopping lists can be created; they can be added on the "SHOPPING LIST" page, which will also show the lists for a user.
 
-### Contributors
-- Zain Momin (Team Leader)
-- Brynna Watring
-- Christina Zhang
-- Steven Luong 
-- Chris Rademacher 
+### Contributors - Github ID
+- Zain Momin (Team Leader) - insane-z41n
+- Christina Zhang - christinazhangstudio
+- Brynna Watring - bwatring
+- Steven Luong - nevetsLuo
+- Chris Rademacher
