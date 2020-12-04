@@ -27,7 +27,7 @@ public class AddListController extends PalController {
 	/**
 	* handles adding a list.
 	* @param e
-	*/
+	**/
 	@FXML
 	private void addList(final ActionEvent e) {
 		System.out.println("Add List");
