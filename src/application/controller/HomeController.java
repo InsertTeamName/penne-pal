@@ -13,7 +13,13 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
-
+/**
+ * HomeController class will handle any actions from the Home.fxml page
+ * 
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class HomeController extends PalController{
 	
 	@FXML
@@ -25,7 +31,11 @@ public class HomeController extends PalController{
 	
 	private User user;
 	
-	
+	/**
+	* initializes the view
+	* @param user
+	* @throws IOException
+	*/
 	public void initializeHome(final User user) throws IOException {
 		this.user = user;
 		
@@ -35,7 +45,11 @@ public class HomeController extends PalController{
 	}
 	
 
-
+	/**
+	* loads the profile view
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void loadProfile(final ActionEvent e) throws IOException {
 		System.out.println("Load Profile");
@@ -45,6 +59,11 @@ public class HomeController extends PalController{
 		loadUserProfile();
 	}
 	
+	/**
+	* loads the shopping list view
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void loadShoppingLists(final ActionEvent e) throws IOException {
 		System.out.println("Load Shopping Lists");
@@ -54,6 +73,10 @@ public class HomeController extends PalController{
 		loadLists();
 	}
 	
+	/**
+	* loads the lists view
+	* @throws IOException
+	*/
 	public void loadLists() throws IOException {
 		final FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(this.getClass().getClassLoader().getResource("application/view/Lists.fxml"));
@@ -64,7 +87,10 @@ public class HomeController extends PalController{
 		homePane.setCenter(pane);
 	}
 	
-	
+	/**
+	* loads the user profile view
+	* @throws IOException
+	*/
 	public void loadUserProfile() throws IOException {
 		final FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(this.getClass().getClassLoader().getResource("application/view/Profile.fxml"));
@@ -75,12 +101,22 @@ public class HomeController extends PalController{
 		homePane.setCenter(pane);
 	}
 	
+	/**
+	* disables button
+	* @param button
+	* @throws IOException
+	*/
 	private void disableButton(final Button button) {
 		button.setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
 		button.setStyle("-fx-text-fill: navy");
 		button.setDisable(true);
 	}
 	
+	/**
+	* enables button
+	* @param button
+	* @throws IOException
+	*/
 	private void enableButton(final Button button) {
 		button.setBackground(new Background(new BackgroundFill(null, null, null)));
 		button.setStyle("-fx-text-fill: WHITE");
