@@ -21,7 +21,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="totalAmounLabel" text="Total Amount: $###.##" textFill="#0a009a">
+                  <Label fx:id="totalAmountLabel" text="Total Amount: $###.##" textFill="#0a009a">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>

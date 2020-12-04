@@ -1,7 +1,6 @@
 package application.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import application.model.Item;
@@ -14,6 +13,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
@@ -33,6 +33,13 @@ public class ListsController extends PalController {
 	private Button addListBtn;
 	@FXML
 	private FlowPane shoppingListPane;
+	@FXML
+	private Label numListsLabel;
+	@FXML
+	private Label totalAmountLabel;
+	
+	private User user;
+	private BorderPane borderPane;
 	
 	/**
 	* initializes lists for an user
@@ -40,40 +47,29 @@ public class ListsController extends PalController {
 	* @param borderPane
 	*/
 	public void initializeLists(final User user, final BorderPane borderPane) throws IOException {
+		this.user = user;
+		this.borderPane = borderPane;
 		
-		final List<ShoppingList> shoppingLists = getShoppingList(user);
+		final List<ShoppingList> shoppingLists = ShoppingList.getShoppingListByUser(user);
+		
+		numListsLabel.setText("Number of List: " + shoppingLists.size());
+		double total = 0;
+		for(ShoppingList list : shoppingLists) {
+			for(Item item : list.getItems()) {
+				total += item.getPrice() * item.getAmount();
+			}
+		}
+		totalAmountLabel.setText("Total Amount: $" + total);
 	
-		//for (ShoppingList list : shoppingLists) {
-		
-		//remove this counter and replace with shopping lists
-		for(int i = 0; i < 3; i++) {
-			
+		for (ShoppingList list : shoppingLists) {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(this.getClass().getClassLoader().getResource("application/view/ShoppingList.fxml"));
 			Pane pane = (Pane) loader.load();
-			
-			Item item = new Item("pizza", 32.50, 3);
-			List<Item> items = new ArrayList<>();
-			items.add(item);
-			
-			ShoppingList list = new ShoppingList();
-			list.setItems(items);
-			list.setListName("List " + i);
-			
-
+		
 			ShoppingListController shoppingListController = loader.getController();
-			shoppingListController.initializeController(list, borderPane);
+			shoppingListController.initializeController(user, list, borderPane, shoppingListPane);
 			shoppingListPane.getChildren().add(pane);
 		}
-	}
-	/**
-	* returns shopping list for an user
-	* @param user
-	* @return new ArrayList<>()
-	*/
-	private List<ShoppingList> getShoppingList(final User user) {
-		
-		return new ArrayList<>();
 	}
 	
 	/**
@@ -88,16 +84,15 @@ public class ListsController extends PalController {
 		listPopup.initModality(Modality.APPLICATION_MODAL);
 		final Stage currentStage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 		listPopup.initOwner(currentStage);
-		Pane pane = new Pane();
 		
 		final FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(this.getClass().getClassLoader().getResource("application/view/AddList.fxml"));
-		
-		
+				
 		final Parent root = loader.load();
 		final Scene scene = new Scene(root);
-		
+
 		final AddListController listController = loader.getController();
+		listController.initializeAddList(user, shoppingListPane, borderPane);
 		
 		listPopup.setScene(scene);
 		listPopup.show();

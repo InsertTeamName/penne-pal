@@ -8,16 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <BorderPane fx:id="shoppingList" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#editShoppingList" prefHeight="120.0" prefWidth="100.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ShoppingListController">
-   <top>
-      <Button fx:id="removeListBtn" mnemonicParsing="false" onAction="#removeList" style="-fx-background-color: RED;" text="X" textFill="WHITE" BorderPane.alignment="TOP_RIGHT">
-         <font>
-            <Font name="System Bold" size="8.0" />
-         </font>
-         <BorderPane.margin>
-            <Insets left="2.0" right="2.0" top="2.0" />
-         </BorderPane.margin>
-      </Button>
-   </top>
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>

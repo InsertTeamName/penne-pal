@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 
 /**
  * ItemController class will handle the actions associated with items for each list.
@@ -23,29 +24,23 @@ public class ItemController extends PalController{
 	private Label itemQuantityLabel;
 	@FXML
 	private Label totalAmountLabel;
-	@FXML
-	private Button removeItemBtn;
-	
+
 	private Item item;
+	private VBox vBox;
 	
 	/**
-	* initializes the item, setting its information
-	* @param item
-	*/
-	public void initializeItem(final Item item) {
+	 * initializes the item, setting its information
+	 * @param item
+	 * @param vBox
+	 */
+	public void initializeItem(final Item item, final VBox vBox) {
 		this.item = item;
+		this.vBox = vBox;
 		nameOfItem.setText(item.getItemName());
 		itemPriceLabel.setText(String.valueOf(item.getPrice()));
 		itemQuantityLabel.setText(String.valueOf(item.getAmount()));
 		totalAmountLabel.setText(String.valueOf(item.getAmount() * item.getPrice()));
 		
-	}
-	/**
-	* removes an item
-	*/
-	@FXML
-	public void removeItem() {
-		System.out.println("Remove Item");
 	}
 
 }
