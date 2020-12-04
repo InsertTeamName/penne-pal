@@ -29,7 +29,7 @@ public class ShoppingList {
 	
 	/**
 	* set items for a list.
-	* @param items
+	* @param items (String) 
 	*/
 	public void setItems(List<Item> items) {
 		this.items = items;
