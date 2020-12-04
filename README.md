@@ -9,3 +9,7 @@ _[List Application Features Here]_
 
 ### Contributors
 - Zain Momin (Team Leader)
+- Brynna Watring
+- Christina Zhang
+- Steven Luong 
+- Chris Rademacher 
