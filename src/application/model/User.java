@@ -1,3 +1,7 @@
+
+
+
+
 package application.model;
 
 import java.io.BufferedWriter;
@@ -6,6 +10,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+
+
+// @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
+
 public class User {
 	
 	private String username;
@@ -13,6 +21,7 @@ public class User {
 	private String name;
 	private String email;
 	
+	// @param string for username, string for password, string for name, and string for email 
 	public User (final String username, final String password, final String name, final String email) {
 		this.username = username;
 		this.password = password;
@@ -20,34 +29,43 @@ public class User {
 		this.email = email;
 	}
 	
-	
+	//@returns username that is a string 
 	public String getUsername() {
 		return username;
 	}
+	//@param one parameter that is a string,  username 
 	public void setUsername(String username) {
 		this.username = username;
 	}
+	
+	//returns password that is a string that is read in from user
 	public String getPassword() {
 		return password;
 	}
+	//@param string password sets userinputs password to password 
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	// @return name, returns the name given by user 
 	public String getName() {
 		return name;
 	}
+	// @param string name sets name to the input name from user input 
 	public void setName(String name) {
 		this.name = name;
 	}
+	// @return email read in from user input 
 	public String getEmail() {
 		return email;
 	}
+	// @param string email sets email to the input email from user input 
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
 	/**
 	 * This method reads the file of users and validates the entered credentials.
+	 * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
 	 * @param inpUsername	String of inputted username. 
 	 * @param inpPassword	String of inputted password.
 	 * @param user			User object to be updated (name/email) if validated - needed for profile view.
@@ -93,6 +111,7 @@ public class User {
 	
 	/*
 	 * This method reads the file of users and checks if the username of the user attempting to signup already exists.
+	 * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
 	 * @param inpUsername	String of inputted username. 
 	 * @return validUsername	boolean value.
 	 * @throws IOException
@@ -119,6 +138,7 @@ public class User {
 	
 	/**
 	 * This method adds a new user to the user database.
+	 * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
 	 * @param newUser	User object to be added.
 	 * @throws IOException
 	 */
@@ -146,6 +166,7 @@ public class User {
 	
 	/**
 	 * This method edits the profile of the user, updated the CSV database.
+	 * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
 	 * @param username	String of username to find and match in database to locate correct user.
 	 * @param newName	String of new name for user.
 	 * @param newEmail	String of new email for user.
