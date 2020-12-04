@@ -13,6 +13,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
+/**
+ * ShoppingListController class will handle actions relating to the UpdateList.fxml view.
+ * 
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class ShoppingListController extends PalController {
 	
 	@FXML
@@ -30,6 +37,12 @@ public class ShoppingListController extends PalController {
 	private ShoppingList shoppingList;
 	private BorderPane borderPane;
 	
+	/**
+	* initializes the view.
+	* @param shoppingList
+	* @param borderPane
+	* @throws IOException
+	*/
 	public void initializeController(final ShoppingList shoppingList, final BorderPane borderPane) throws IOException {
 		this.shoppingList = shoppingList;
 		this.borderPane = borderPane;
@@ -43,7 +56,11 @@ public class ShoppingListController extends PalController {
 		
 		
 	}
-	
+	/**
+	* handles updating a shopping list.
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void editShoppingList(final MouseEvent e) throws IOException {
 		System.out.println("Selected " + listLabel.getText());
@@ -59,6 +76,10 @@ public class ShoppingListController extends PalController {
 		
 	}
 	
+	/**
+	* removes a list.
+	* @param e
+	*/
 	@FXML
 	public void removeList(final ActionEvent e) {
 		System.out.println("Remove list: " + listLabel.getText());
