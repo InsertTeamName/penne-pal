@@ -69,6 +69,7 @@ public class ListsController extends PalController {
 	/**
 	* returns shopping list for an user
 	* @param user
+	* @return new ArrayList<>()
 	*/
 	private List<ShoppingList> getShoppingList(final User user) {
 		
