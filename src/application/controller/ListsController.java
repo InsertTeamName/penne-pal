@@ -20,6 +20,13 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+/**
+ * ListController class will handle the actions associated with shopping lists.
+ * 
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class ListsController extends PalController {
 
 	@FXML
@@ -27,6 +34,11 @@ public class ListsController extends PalController {
 	@FXML
 	private FlowPane shoppingListPane;
 	
+	/**
+	* initializes lists for an user
+	* @param user
+	* @param borderPane
+	*/
 	public void initializeLists(final User user, final BorderPane borderPane) throws IOException {
 		
 		final List<ShoppingList> shoppingLists = getShoppingList(user);
@@ -54,12 +66,20 @@ public class ListsController extends PalController {
 			shoppingListPane.getChildren().add(pane);
 		}
 	}
-	
+	/**
+	* returns shopping list for an user
+	* @param user
+	*/
 	private List<ShoppingList> getShoppingList(final User user) {
 		
 		return new ArrayList<>();
 	}
 	
+	/**
+	* adds a shopping list for an user
+	* @param user
+	* @throws IOException
+	*/
 	@FXML
 	public void addShoppingList(final ActionEvent e) throws IOException {
 		System.out.println("Add shopping lists");
