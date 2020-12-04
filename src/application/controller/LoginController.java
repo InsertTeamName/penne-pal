@@ -36,8 +36,11 @@ public class LoginController extends PalController{
 		System.out.println("Login");
 		// Check if user name and password exist in csv file
 		// if user name and password do not match show error message
-		final User user = new User("username", "password", "name", "email");
-		boolean validUser = loginUserField.getText().equals("user") && loginPassField.getText().equals("pass");
+		final User user = new User(loginUserField.getText(), loginPassField.getText(), " ", " ");
+		
+		//boolean validUser = loginUserField.getText().equals("user") && loginPassField.getText().equals("pass");
+		boolean validUser = user.validate(user.getUsername(), user.getPassword(), user);
+		
 		if(validUser) {
 			loginErrMsg.setVisible(false);
 			System.out.println("Valid user!");
