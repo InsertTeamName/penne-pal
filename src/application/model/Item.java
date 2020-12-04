@@ -76,7 +76,7 @@ public class Item {
 	
 	/**
 	* toString() for item.
-	* @return string containing item name, item price and item amount (String) 
+	* @return string containing item name, item price, and item amount (String) 
 	*/
 	@Override
 	public String toString() {
