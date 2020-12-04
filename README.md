@@ -28,3 +28,8 @@ This app helps organize your grocery list with a click of a button. User will ma
 ### User Interface Sample For Application 
 
 ![IMG_4873](https://user-images.githubusercontent.com/68093791/101117100-edc93b80-35ab-11eb-9a1a-4e1111bf5a52.jpg)
+
+### Login/ New User Page 
+
+![IMG_4872](https://user-images.githubusercontent.com/68093791/101119905-fc1a5600-35b1-11eb-9f9c-792054ed62ef.jpg)
+
