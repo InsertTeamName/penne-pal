@@ -19,13 +19,21 @@ public class Main extends Application{
 	
 	private Stage primaryStage;
 
-
+	/**
+	 * creates the primary stage and shows the main view.
+	 * @param primaryStage
+	 * @throws IOException
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
 		showMainView();
 	}
 	
+	/**
+	 * sets up the main view. 
+	 * @throws IOException
+	 */
 	private void showMainView() throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("/application/view/Main.fxml"));
 		final Scene scene = new Scene(root);
