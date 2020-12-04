@@ -13,7 +13,7 @@ import javafx.scene.control.TextField;
 /**
  * Sign Up Controller class will handle any actions from the SignUp.fxml page
  * 
- * @author Zain Momin (xct635)
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
  * UTSA CS3443-001
  * Fall 2020
  */
@@ -34,6 +34,11 @@ public class SignupController extends PalController {
 	@FXML
 	private Label signupErrMsg;
 	
+	/**
+	* creates an account for the user
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void signup(final ActionEvent e) throws IOException {
 		System.out.println("Sign Up!");
@@ -56,6 +61,11 @@ public class SignupController extends PalController {
 		
 	}
 	
+	/**
+	* sends user to login page
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void goToLoginPage(final ActionEvent e) throws IOException {
 		System.out.println("Go to Login Page!");
