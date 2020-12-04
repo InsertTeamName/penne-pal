@@ -24,9 +24,11 @@ public class Item {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	// @return 
 	public int getAmount() {
 		return amount;
 	}
+	// @ param an int amount 
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
