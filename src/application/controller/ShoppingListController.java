@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import application.model.Item;
 import application.model.ShoppingList;
+import application.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
 
 /**
  * ShoppingListController class will handle actions relating to the UpdateList.fxml view.
@@ -21,9 +24,7 @@ import javafx.scene.layout.BorderPane;
  * Fall 2020
  */
 public class ShoppingListController extends PalController {
-	
-	@FXML
-	private Button removeListBtn;
+
 	
 	@FXML
 	private ListView<String> shoppingItemsList;
@@ -36,20 +37,24 @@ public class ShoppingListController extends PalController {
 	
 	private ShoppingList shoppingList;
 	private BorderPane borderPane;
-	
+	private User user;
+	private FlowPane shoppingListPane;
+
 	/**
-	* initializes the view.
-	* @param shoppingList
-	* @param borderPane
-	* @throws IOException
-	*/
-	public void initializeController(final ShoppingList shoppingList, final BorderPane borderPane) throws IOException {
+	 * initializes the view.
+	 * @param user
+	 * @param shoppingList
+	 * @param borderPane
+	 * @param shoppingListPane
+	 * @throws IOException
+	 */
+	public void initializeController(final User user, final ShoppingList shoppingList, final BorderPane borderPane, final FlowPane shoppingListPane) throws IOException {
 		this.shoppingList = shoppingList;
 		this.borderPane = borderPane;
+		this.user = user;
+		this.shoppingListPane = shoppingListPane;
 		
 		listLabel.setText(shoppingList.getListName());
-		System.out.println(shoppingList.getItems());
-		System.out.println(shoppingItemsList);
 		for(Item item : shoppingList.getItems()) {
 			shoppingItemsList.getItems().add(item.toString());
 		}
@@ -70,19 +75,11 @@ public class ShoppingListController extends PalController {
 		BorderPane pane = (BorderPane) loader.load();
 		
 		UpdateListController updateController= loader.getController();
-		updateController.initializeUpdateList(shoppingList.getItems());
+		updateController.initializeUpdateList(shoppingList, user);
 		
 		borderPane.setCenter(pane);
 		
 	}
-	
-	/**
-	* removes a list.
-	* @param e
-	*/
-	@FXML
-	public void removeList(final ActionEvent e) {
-		System.out.println("Remove list: " + listLabel.getText());
-	}
+
 
 }
