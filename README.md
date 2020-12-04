@@ -11,6 +11,7 @@ _This app helps organize your grocery list with a click of a button. User will m
 
 **List Customization**
 - The user can customize their shopping lists, adding items along with their prices and quantities.
+- The user can make a variety of lists with different items inside. 
 
 **Add new lists**
 - New shopping lists can be created; they can be added on the "SHOPPING LIST" page, which will also show the lists for a user.
