@@ -1,5 +1,7 @@
 package application.controller;
 
+import java.io.IOException;
+
 import application.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,12 +18,15 @@ public class ProfileController extends PalController {
 	@FXML
 	private Label userLabel;
 	@FXML
+	private Label hiddenUsername;
+	@FXML
 	private Label errorLabel;
 	@FXML
 	private Button saveBtn;
 	@FXML
 	private Button signOutBtn;
 	
+	private User tempUser;
 	
 	public void initializeProfile(final User user) {
 		if(user.getName() == null || user.getName().equals("")) {
@@ -32,11 +37,17 @@ public class ProfileController extends PalController {
 			nameTextField.setText(user.getName());
 			emailTextField.setText(user.getEmail());
 		}
+		
+		if(user.getUsername() != null && !(user.getUsername().equals(""))){
+			hiddenUsername.setText(user.getUsername());
+		}
+		tempUser = user;
 	}
 	
 	@FXML
-	public void signOutUser(final ActionEvent e) {
+	public void signOutUser(final ActionEvent e) throws IOException{
 		System.out.println("Sign Out User!");
+		switchScene(this, "application/view/Main.fxml", e);
 	}
 	
 	@FXML
@@ -47,6 +58,12 @@ public class ProfileController extends PalController {
 		}
 		else {
 			errorLabel.setVisible(false);
+			//Update CSV file
+			try {
+				tempUser.editProfile(hiddenUsername.getText(), nameTextField.getText(), emailTextField.getText());
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
 		}
 	}
 
