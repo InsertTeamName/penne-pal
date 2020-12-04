@@ -19,7 +19,13 @@ import javafx.stage.Stage;
  * Fall 2020
  */
 public class PalController {
-	
+	/**
+	* switches views.
+	* @param controller
+	* @param resourcePath
+	* @param event
+	* @throws IOException
+	*/
 	public <T> void switchScene(final T controller, final String resourcePath, final ActionEvent event) throws IOException {
 		final FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(controller.getClass().getClassLoader().getResource(resourcePath));
@@ -32,6 +38,14 @@ public class PalController {
 		stage.show();
 	}
 	
+	/**
+	* switches view to the home scene.
+	* @param controller
+	* @param user
+	* @param resourcePath
+	* @param event
+	* @throws IOException
+	*/
 	public <T> void switchToHomeScene(final T controller, final User user, final String resourcePath, final ActionEvent event) throws IOException {
 		final FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(controller.getClass().getClassLoader().getResource(resourcePath));
