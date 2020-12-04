@@ -14,7 +14,8 @@ public class Item {
 	private int amount;
 	
 	/**
-	* constructor for item object.
+	* Public Item 
+	* contains constructor for item object.
 	* @param itemName
 	* @param price
 	* @param amount
@@ -26,40 +27,40 @@ public class Item {
 	}
 	
 	/**
-	* get item name.
-	* @return itemName
+	* gets item name.
+	* @return itemName (String) 
 	*/
 	public String getItemName() {
 		return itemName;
 	}
 	
 	/**
-	* set item name.
-	* @param itemName
+	* sets item name.
+	* @param itemName (String) 
 	*/
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
 	
 	/**
-	* get item price.
-	* @return price
+	* gets item price.
+	* @return price (double) 
 	*/
 	public double getPrice() {
 		return price;
 	}
 		
 	/**
-	* set item price.
-	* @param price
+	* sets item price.
+	* @param price (double) 
 	*/
 	public void setPrice(double price) {
 		this.price = price;
 	}
 	
 	/**
-	* get item amount.
-	* @return amount
+	* gets item amount.
+	* @return amount (int) 
 	*/
 	public int getAmount() {
 		return amount;
@@ -67,7 +68,7 @@ public class Item {
 	
 	/**
 	* set item amount.
-	* @param amount
+	* @param amount (int) 
 	*/
 	public void setAmount(int amount) {
 		this.amount = amount;
@@ -75,7 +76,7 @@ public class Item {
 	
 	/**
 	* toString() for item.
-	* @return string
+	* @return string containing item name, item price and item amount (String) 
 	*/
 	@Override
 	public String toString() {
