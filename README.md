@@ -21,3 +21,6 @@ _This app helps organize your grocery list with a click of a button. User will m
 - Brynna Watring - bwatring
 - Steven Luong - nevetsLuo
 - Chris Rademacher
+### User Interface Sample 
+
+![IMG_4873](https://user-images.githubusercontent.com/68093791/101117100-edc93b80-35ab-11eb-9a1a-4e1111bf5a52.jpg)
