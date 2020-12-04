@@ -11,6 +11,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * PalController class will handle switching screens.
+ * 
+ * @author Zain Momin (xct635)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class PalController {
 	
 	public <T> void switchScene(final T controller, final String resourcePath, final ActionEvent event) throws IOException {
