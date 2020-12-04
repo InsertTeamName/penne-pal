@@ -2,6 +2,13 @@ package application.model;
 
 import java.util.List;
 
+/**
+ * ShoppingList class contains constructor for ShoppingList object as well as any associated methods.
+ * 
+ * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class ShoppingList {
 	
 	private String listName;
@@ -11,19 +18,35 @@ public class ShoppingList {
 		
 		return null;
 	}
-	// @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
+	
+	/**
+	* get items for a list.
+	* @return items
+	*/
 	public List<Item> getItems() {
 		return items;
 	}
-	// @param a list of items from the user input 
+	
+	/**
+	* set items for a list.
+	* @param items
+	*/
 	public void setItems(List<Item> items) {
 		this.items = items;
 	}
-	// @return string listName that contains list of names 
+	
+	/**
+	* get list name for a list.
+	* @return listName
+	*/
 	public String getListName() {
 		return listName;
 	}
-	// @param a string of list names 
+	
+	/**
+	* set list name for a list.
+	* @param listName
+	*/
 	public void setListName(String listName) {
 		this.listName = listName;
 	}
