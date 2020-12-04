@@ -9,6 +9,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+/**
+ * ProfileController class will handle actions relating to the Profile view.
+ * 
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class ProfileController extends PalController {
 	
 	@FXML
@@ -28,6 +35,10 @@ public class ProfileController extends PalController {
 	
 	private User tempUser;
 	
+	/**
+	* initializes the profile view for a user.
+	* @param user
+	*/
 	public void initializeProfile(final User user) {
 		if(user.getName() == null || user.getName().equals("")) {
 			userLabel.setText("Hi " + user.getUsername());
@@ -44,12 +55,21 @@ public class ProfileController extends PalController {
 		tempUser = user;
 	}
 	
+	/**
+	* signs out the user.
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void signOutUser(final ActionEvent e) throws IOException{
 		System.out.println("Sign Out User!");
 		switchScene(this, "application/view/Main.fxml", e);
 	}
 	
+	/**
+	* saves updated information for a user.
+	* @param e
+	*/
 	@FXML
 	public void saveInfo(final ActionEvent e) {
 		System.out.println("Save Info");
