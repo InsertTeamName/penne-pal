@@ -18,7 +18,7 @@
          </BorderPane.margin></Label>
    </top>
    <left>
-      <VBox prefHeight="334.0" prefWidth="268.0" spacing="5.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="334.0" prefWidth="268.0" spacing="5.0" translateY="-20.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Sign Up" textFill="WHITE">
                <font>
@@ -45,6 +45,26 @@
                   <PasswordField fx:id="signupPassField" />
                </children>
             </VBox>
+            <VBox>
+               <children>
+                  <Label text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signupNameField" prefHeight="25.0" prefWidth="0.0" />
+                  <VBox>
+                     <children>
+                        <Label text="Email" textFill="WHITE">
+                           <font>
+                              <Font name="Times New Roman" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="signupEmailField" prefHeight="25.0" prefWidth="0.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
             <Button fx:id="signupBtn" mnemonicParsing="false" onAction="#signup" style="-fx-background-color: gold;" text="SIGN UP">
                <font>
                   <Font name="Arial Bold" size="25.0" />
@@ -53,7 +73,7 @@
                   <Insets top="5.0" />
                </VBox.margin>
             </Button>
-            <FlowPane prefHeight="200.0" prefWidth="200.0">
+            <FlowPane prefHeight="51.0" prefWidth="267.0">
                <children>
                   <Label text="Already have an account?" textFill="WHITE">
                      <font>
