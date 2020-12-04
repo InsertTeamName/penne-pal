@@ -42,12 +42,12 @@ public class AddListController extends PalController {
 	/**
 	* handles adding a list.
 	* @param e
+	*/
 	public void initializeAddList(final User user, final FlowPane shoppingListPane, final BorderPane borderPane) {
 		this.user = user;
 		this.shoppingListPane = shoppingListPane;
 		this.borderPane = borderPane;
 	}
-  
 	@FXML
 	private void addList(final ActionEvent e) throws IOException {
 		System.out.println("Add List");
