@@ -30,7 +30,11 @@ public class LoginController extends PalController{
 	@FXML
 	private Label loginErrMsg;
 	
-	
+	/**
+	* handles the login action, validating the user credentials and providing error message if needed
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void login(final ActionEvent e) throws IOException {
 		System.out.println("Login");
@@ -51,6 +55,11 @@ public class LoginController extends PalController{
 		}
 	}
 	
+	/**
+	* sends user to sign up page if sign up button clicked.
+	* @param e
+	* @throws IOException
+	*/
 	@FXML
 	public void goToSignUpPage(final ActionEvent e) throws IOException {
 		System.out.println("Go to Sign Up Page!");
