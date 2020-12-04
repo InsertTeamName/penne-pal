@@ -21,7 +21,7 @@ public class ShoppingList {
 	
 	/**
 	* get items for a list.
-	* @return items
+	* @return items (String) 
 	*/
 	public List<Item> getItems() {
 		return items;
@@ -37,7 +37,7 @@ public class ShoppingList {
 	
 	/**
 	* get list name for a list.
-	* @return listName
+	* @return listName (String) 
 	*/
 	public String getListName() {
 		return listName;
@@ -45,7 +45,7 @@ public class ShoppingList {
 	
 	/**
 	* set list name for a list.
-	* @param listName
+	* @param listName (String) 
 	*/
 	public void setListName(String listName) {
 		this.listName = listName;
