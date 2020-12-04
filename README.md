@@ -10,7 +10,7 @@ _This app helps organize your grocery list with a click of a button. User will m
 - The user's lists are saved and protected. They are accessible even after signing out!
 
 **Storage and Data** 
-- CSV files imported to provide information on prices and products 
+- CSV files imported to provide a public list of information on prices and products. 
 
 **List Customization**
 - The user can customize their shopping lists, adding items along with their prices and quantities.
