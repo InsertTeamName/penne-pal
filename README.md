@@ -9,6 +9,9 @@ _This app helps organize your grocery list with a click of a button. User will m
 - On the "PROFILE" page, the user can edit their profile, updating their name or email. They can sign-out from here as well.
 - The user's lists are saved and protected. They are accessible even after signing out!
 
+**Storage and Data** 
+- CSV files imported to provide information on prices and products 
+
 **List Customization**
 - The user can customize their shopping lists, adding items along with their prices and quantities.
 - The user can make a variety of lists with different items inside. 
