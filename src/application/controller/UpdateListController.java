@@ -12,6 +12,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
+/**
+ * UpdateListController class will handle any actions associated with Item.fxml
+ * 
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class UpdateListController extends PalController{
 	
 	@FXML
@@ -27,10 +34,18 @@ public class UpdateListController extends PalController{
 	@FXML
 	private VBox itemsPane;
 
-	
+	/**
+	* loads items into a list.
+	* @param items
+	* @throws IOException
+	*/
 	public void initializeUpdateList(final List<Item> items) throws IOException {
 		loadItemsList(items);
 	}
+	
+	/**
+	* adds items into a list.
+	*/
 	@FXML
 	public void addItem() {
 		
@@ -44,7 +59,11 @@ public class UpdateListController extends PalController{
 		
 	}
 
-	
+	/**
+	* loads items into a list.
+	* @param items
+	* @throws IOException
+	*/
 	private void loadItemsList(final List<Item> items) throws IOException {
 		for(Item item : items) {
 			FXMLLoader loader = new FXMLLoader();
