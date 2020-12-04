@@ -232,13 +232,14 @@ public class User {
 	            }
 	        }
 	    	}
+			//makes new csv file 
 	    	scan.close();
-	    	File f = new File("users.csv");
+	    	File f = new File("users.csv"); 
 	    	f.delete();
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 
-	    System.out.println("User CSV has been updated!");	
+	    System.out.println("User CSV has been updated!");	//lets user know if CSV file was successfully updated or not 
 		bw.close();
 		fw.close();
 		file.renameTo(new File("users.csv"));
