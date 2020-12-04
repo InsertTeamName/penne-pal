@@ -23,7 +23,7 @@ import javafx.scene.layout.Pane;
  * @author Zain Momin (xct635) Christina Zhang (tro558)
  * UTSA CS3443-001
  * Fall 2020
- */
+ **/
 public class AddListController extends PalController {
 
 	@FXML
@@ -42,14 +42,12 @@ public class AddListController extends PalController {
 	/**
 	* handles adding a list.
 	* @param e
-	*/
 	public void initializeAddList(final User user, final FlowPane shoppingListPane, final BorderPane borderPane) {
 		this.user = user;
 		this.shoppingListPane = shoppingListPane;
 		this.borderPane = borderPane;
 	}
-	
-
+  
 	@FXML
 	private void addList(final ActionEvent e) throws IOException {
 		System.out.println("Add List");
