@@ -1,7 +1,3 @@
-
-
-
-
 package application.model;
 
 import java.io.BufferedWriter;
@@ -59,7 +55,7 @@ public class User {
 	/**
 	*
 	* Returns the password entered by the user 
-	*@return password that is a string that is read in from user
+	*@return password that is a string that is read in from user (String) 
 	*
 	*/
 	public String getPassword() {
@@ -78,7 +74,7 @@ public class User {
 	}
 	/**
 	* Returns the name entered by the user
-	* @return String of the name of the account entered
+	* @return String of the name of the account entered (String) 
 	*
 	*/
 	public String getName() {
@@ -123,9 +119,9 @@ public class User {
 	 * @throws IOException
 	 */
 	public boolean validate(String inpUsername, String inpPassword, User user)throws IOException {
-		boolean foundUser = false;		
+		boolean foundUser = false;	//boolean to check for correct/ incorrect password and username 	
 		try {
-	    	Scanner scan = new Scanner(new File("users.csv") );
+	    	Scanner scan = new Scanner(new File("users.csv") ); //creates new  csv file for user 
 
 	    	while( scan.hasNextLine() ) {
 	    		String line = scan.nextLine();
@@ -167,23 +163,23 @@ public class User {
 	 * @throws IOException
 	 */
 	public boolean checkForExistingUser(String inpUsername)throws IOException {
-		boolean validUsername = true;		
+		boolean validUsername = true;		//boolean checking if username exists 
 		try {
-	    	Scanner scan = new Scanner(new File("users.csv") );
+	    	Scanner scan = new Scanner(new File("users.csv") ); //new csv file 
 
 	    	while( scan.hasNextLine() ) {
 	    		String line = scan.nextLine();
 	    		String[] data = line.split(",");
 	            if(data[0].equals(inpUsername))
 	            {
-	            	validUsername = false;
+	            	validUsername = false; //if username is invalid or non-existent 
 	            }
 	        }
 	    	scan.close();
 	    } catch(IOException e) {
 	    e.printStackTrace();
 	    }	
-		return validUsername;
+		return validUsername; //returns username back to user 
 	}
 	
 	/**
@@ -209,7 +205,7 @@ public class User {
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 
-	    System.out.println("User CSV has been added to!");	
+	    System.out.println("User CSV has been added to!");	// success message to let user know CSV file has been added to 
 		bw.close();
 		fw.close();
 	}
@@ -229,7 +225,7 @@ public class User {
 		BufferedWriter bw = new BufferedWriter(fw);		
 		
 		try {
-	    	Scanner scan = new Scanner(new File("users.csv") );
+	    	Scanner scan = new Scanner(new File("users.csv") ); //create new csv file 
 
 	    	while( scan.hasNextLine()) {
 	    		String line = scan.nextLine();
