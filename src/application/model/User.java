@@ -16,6 +16,7 @@ import java.util.Scanner;
 * This class represensts User name inputs 
 *
 * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
+* UTSA 
 */
 
 public class User {
@@ -63,23 +64,50 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
-	//@param string password sets userinputs password to password 
+	/**
+	* Sets the name of the password entered by the user
+	*
+	*@param string password sets userinputs password to password (String)
+	*
+	*/
+	
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	// @return name, returns the name given by user 
+	/**
+	* Returns the name entered by the user
+	* @return String of the name of the account entered
+	*
+	*/
 	public String getName() {
 		return name;
 	}
-	// @param string name sets name to the input name from user input 
+	/**
+	*
+	* Sets the name of the user entered by the user 
+	* @param name to se the name enterd by the user(String) 
+	*/
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-	// @return email read in from user input 
+	/*
+	*
+	* Returns the email entered by the user 
+	* @return string email read in from user input (String) 
+	*/
+	
 	public String getEmail() {
 		return email;
 	}
-	// @param string email sets email to the input email from user input 
+	
+	/*
+	* Sets the name of the email of the account entered by the email 
+	* @param string email sets email to the input email from user input (String) 
+	*
+	*/
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
