@@ -6,6 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 
+/**
+ * ItemController class will handle the actions associated with items for each list.
+ * 
+ * @author Zain Momin (xct635) Christina Zhang (tro558)
+ * UTSA CS3443-001
+ * Fall 2020
+ */
 public class ItemController extends PalController{
 	
 	@FXML
@@ -21,6 +28,10 @@ public class ItemController extends PalController{
 	
 	private Item item;
 	
+	/**
+	* initializes the item, setting its information
+	* @param item
+	*/
 	public void initializeItem(final Item item) {
 		this.item = item;
 		nameOfItem.setText(item.getItemName());
@@ -29,6 +40,9 @@ public class ItemController extends PalController{
 		totalAmountLabel.setText(String.valueOf(item.getAmount() * item.getPrice()));
 		
 	}
+	/**
+	* removes an item
+	*/
 	@FXML
 	public void removeItem() {
 		System.out.println("Remove Item");
