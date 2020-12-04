@@ -24,6 +24,10 @@ public class SignupController extends PalController {
 	@FXML
 	private PasswordField signupPassField;
 	@FXML
+	private TextField signupNameField;
+	@FXML
+	private TextField signupEmailField;
+	@FXML
 	private Button signupBtn;
 	@FXML
 	private Button loginBtn;
@@ -34,11 +38,16 @@ public class SignupController extends PalController {
 	public void signup(final ActionEvent e) throws IOException {
 		System.out.println("Sign Up!");
 		// if user name exists in csv file then show error message.
-		boolean validUsername = !signupUserField.getText().equals("user");
+		//boolean validUsername = !signupUserField.getText().equals("user");
+
+		final User user = new User(signupUserField.getText(), signupPassField.getText(), signupNameField.getText(), signupEmailField.getText());
+		boolean validUsername = user.checkForExistingUser(user.getUsername());
+		
 		if(validUsername) {
 			signupErrMsg.setVisible(false);
 			// Add user name and password to excel file
-			final User user = new User(signupUserField.getText(), signupPassField.getText(), "", "");
+			user.addUserToCSV(user);
+			//final User user = new User(signupUserField.getText(), signupPassField.getText(), "", "");
 			
 			switchToHomeScene(this, user, "application/view/Home.fxml", e);
 		} else {
@@ -56,3 +65,4 @@ public class SignupController extends PalController {
 	
 	
 }
+
