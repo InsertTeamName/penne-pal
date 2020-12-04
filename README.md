@@ -1,6 +1,6 @@
 # Penne Pal
 
-_This app helps organize your grocery list with a click of a button. User will make an account and then you can log everything you want/ need. This will keep track of what you buy, when you buy and will also track your budget so you won't have to worry about overspending or disorganization ever again. 
+-This app helps organize your grocery list with a click of a button. User will make an account and then you can log everything you want/ need. This will keep track of what you buy, when you buy and will also track your budget so you won't have to worry about overspending or disorganization ever again. 
 
 ### Application Features
 
