@@ -16,7 +16,8 @@ import java.util.Scanner;
 * This class represensts User name inputs 
 *
 * @author Brynna watring, Christina Zhang, Zain Momin, Steven Luong, Chris Rademacher 
-* UTSA 
+* UUTSA CS3443-001
+* Fall 2020
 */
 
 public class User {
@@ -270,7 +271,7 @@ public class User {
 	    System.out.println("User CSV has been updated!");	//lets user know if CSV file was successfully updated or not 
 		bw.close();
 		fw.close();
-		file.renameTo(new File("users.csv"));
+		file.renameTo(new File("users.csv")); //renames csv file and closes bw and fw  
 	}
 }
 	
